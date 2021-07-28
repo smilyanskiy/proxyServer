@@ -22,13 +22,5 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.12"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/smilyanskiy/proxyServer.git"
-  },
-  "bugs": {
-    "url": "https://github.com/smilyanskiy/proxyServer/issues"
-  },
-  "homepage": "https://github.com/smilyanskiy/proxyServer#readme"
+  }
 }

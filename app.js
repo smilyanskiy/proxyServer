@@ -1,6 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
+const cors = require("cors");
 const { createProxyMiddleware } = require("http-proxy-middleware");
 const api = require("./api");
 
@@ -8,6 +9,14 @@ const app = express();
 
 const PORT = 4001;
 const HOST = "localhost";
+
+app.use(
+  cors({
+    origin: process.env.API_SERVICE_URL,
+    methods: ["POST"],
+    credentials: true,
+  })
+);
 
 app.use(bodyParser.json());
 app.use("/", api);

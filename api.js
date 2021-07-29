@@ -15,7 +15,7 @@ router.post("/event", function (req, res) {
       event_id: Number(eventID),
     },
     method: "frontend/event/get",
-  }).then((data) => res.status(200).send(data));
+  }).then((data) => res.status(200).json(data));
 });
 
 module.exports = router;

@@ -2,7 +2,6 @@ const router = require("express").Router();
 const { postData } = require("./utils");
 
 router.get("/event", (req, res, next) => {
-  console.log(res);
   res.status(200).send();
 });
 

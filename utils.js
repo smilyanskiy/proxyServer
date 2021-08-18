@@ -1,7 +1,7 @@
 const fetch = require("node-fetch");
 
 const postData = (url = "/", data = {}) =>
-  fetch(process.env.API_SERVICE_URL + url, {
+  fetch(url, {
     method: "POST",
     cache: "no-cache",
     credentials: "include",

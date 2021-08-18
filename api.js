@@ -1,13 +1,14 @@
 const router = require("express").Router();
 const { postData } = require("./utils");
 
-router.get("/*", (req, res, next) => {
-  res.status(405).send("Not allowed");
+router.get("/event", (req, res, next) => {
+  console.log(res);
+  res.status(200).send();
 });
 
 router.post("/event", function (req, res) {
   const { eventID } = req.body;
-  return postData("/frontend_api2/", {
+  postData(process.env.API_SERVICE_URL + "/frontend_api2/", {
     params: {
       lang: "en",
       service_id: 0,
